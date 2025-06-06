@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?family=Edu+SA+Beginner:wght@400;500;600;700&display=swap"
+    />
+    <link rel="stylesheet" href="style.css">
+
+    <title>For My Girl</title>
+    <link rel="icon" href="./img/M (11).jpg">
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64," />
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <style>
+       
+    </style>
+  </head>
+  <body>
+    <div class="page-hearts">
+        <div class="page-heart"></div>
+        <div class="page-heart"></div>
+        <div class="page-heart"></div>
+        <div class="page-heart"></div>
+        <div class="page-heart"></div>
+        <div class="page-heart"></div>
+        <div class="page-heart"></div>
+        <div class="page-heart"></div>
+        <div class="page-heart"></div>
+        <div class="page-heart"></div>
+        <div class="page-heart"></div>
+        <div class="page-heart"></div>
+        <div class="page-heart"></div>
+        <div class="page-heart"></div>
+        <div class="page-heart"></div>
+        <div class="page-heart"></div>
+        <div class="page-heart"></div>
+        <div class="page-heart"></div>
+        <div class="page-heart"></div>
+        <div class="page-heart"></div>
+    </div>
+
+    <div class="flex flex-col min-h-screen">
+      <header class="header flex items-center justify-between px-4 py-3 border-b border-solid border-b-[#FF69B4]">
+        <div class="flex items-center gap-4">
+          <div class="size-4">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0_6_330)">
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M24 0.757355L47.2426 24L24 47.2426L0.757355 24L24 0.757355ZM21 35.7574V12.2426L9.24264 24L21 35.7574Z"
+                  fill="currentColor"
+                ></path>
+              </g>
+              <defs>
+                <clipPath id="clip0_6_330"><rect width="48" height="48" fill="white"></rect></clipPath>
+              </defs>
+            </svg>
+          </div>
+          <h2 class="header-text text-2xl font-bold leading-tight tracking-[-0.015em]">My BAtitiiiiiiiiiii</h2>
+        </div>
+        <button class="theme-toggle" onclick="toggleTheme()">
+          <span class="text-white">💖</span>
+        </button>
+      </header>
+
+      <main class="flex-1">
+        <div class="main-container">
+          <div class="flex flex-col items-center justify-center py-8">
+            <h1 class="eid-greeting mb-4">
+              Happy Eid, Eid Mubarak Batitiiii 💖
+              <div class="floating-hearts">
+                <div class="heart"></div>
+                <div class="heart"></div>
+                <div class="heart"></div>
+                <div class="heart"></div>
+                <div class="heart"></div>
+                <div class="heart"></div>
+                <div class="heart"></div>
+                <div class="heart"></div>
+              </div>
+            </h1>
+            <p class="subtitle">May this Eid bring you joy, love, and beautiful memories</p>
+            <p>This is just a little something I made for you because you mean the world to me. Every time I think about you, my heart smiles.
+
+                We've had so many amazing moments — from laughing until we cry, to those quiet moments where just being together feels like magic.
+                
+                I love how kind, smart, and beautiful you are — inside and out. Thank you for being you.
+                
+                My Beautiful Girl 💝</p>
+          </div>
+          <div id="gallery" class="gallery-grid">
+            <!-- Images will be loaded here automatically -->
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script>
+        // Function to load images
+        function loadImages() {
+    const gallery = document.getElementById('gallery');
+    
+    // Array of image filenames
+    const images = [
+        'M (1).jpg',
+        'M (2).jpg',
+        'M (3).jpg',
+        'M (4).jpg',
+        'M (5).jpg',
+        'M (6).jpg',
+        'M (7).jpg',
+        'M (8).jpg',
+        'M (9).jpg',
+        'M (10).jpg',
+        'M (11).jpg',
+        'M (12).jpg',
+        'M (13).jpg',
+        'M (14).jpg',
+        'M (15).jpg',
+        'M (16).jpg',
+        'M (17).jpg',
+        'M (18).jpg',
+        'M (19).jpg',
+        'M (20).jpg',
+        'M (21).jpg',
+        'M (22).jpg',
+        'M (23).jpg',
+        'M (24).jpg',
+        'M (25).jpg',
+        'M (26).jpg',
+        'M (27).jpg',
+        'M (28).jpg',
+        'M (29).jpg',
+        'M (30).jpg',
+        'M (31).jpg',
+        'M (32).jpg',
+        'M (33).jpg',
+        'M (34).jpg',
+        'M (35).jpg',
+        'M (36).jpg',
+        'M (37).jpg',
+        'M (38).jpg',
+        'M (39).jpg',
+        'M (40).jpg',
+        'M (41).jpg',
+        'M (42).jpg',
+        'M (43).jpg',
+        'M (44).jpg',
+        'M (45).jpg'
+    ];
+    
+    // Create gallery items for each image
+    images.forEach(file => {
+        const div = document.createElement('div');
+        div.className = 'gallery-item';
+        
+        const imgContainer = document.createElement('div');
+        imgContainer.className = 'w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer';
+        
+        // Create an image element to check if the image exists
+        const img = new Image();
+        img.onload = function() {
+            imgContainer.style.backgroundImage = `url('./img/${file}')`;
+        };
+        img.onerror = function() {
+            console.error(`Failed to load image: ${file}`);
+            // Remove the container if image fails to load
+            div.remove();
+        };
+        img.src = `./img/${file}`;
+        
+        // Add click event for lightbox
+        imgContainer.onclick = () => {
+            const lightbox = document.createElement('div');
+            lightbox.className = 'fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50';
+            lightbox.onclick = () => lightbox.remove();
+            
+            const fullImg = document.createElement('img');
+            fullImg.src = `./img/${file}`;
+            fullImg.className = 'max-h-[90vh] max-w-[90vw] object-contain';
+            
+            lightbox.appendChild(fullImg);
+            document.body.appendChild(lightbox);
+        };
+        
+        div.appendChild(imgContainer);
+        gallery.appendChild(div);
+    });
+}
+
+// Function to toggle theme
+function toggleTheme() {
+    const body = document.body;
+    const isDark = body.getAttribute('data-theme') === 'dark';
+    
+    if (isDark) {
+        body.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'light');
+    } else {
+        body.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+    }
+}
+
+// Check for saved theme preference
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
+    document.body.setAttribute('data-theme', 'dark');
+}
+
+// Load images when the page loads
+window.addEventListener('load', loadImages);
+    </script>
+  </body>
+</html>
